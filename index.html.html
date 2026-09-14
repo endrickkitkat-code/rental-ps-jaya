@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RENTAL PLAYSTATION NAMBARU</title>
+
+    <style>
+
+        /* ================= RESET ================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: white;
+            overflow-x: hidden;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 8%;
+
+            background: rgba(5, 8, 15, 0.97);
+
+            border-bottom: 1px solid #451d85;
+
+            box-shadow:
+                0 0 15px rgba(0, 234, 255, 0.15);
+        }
+
+        .logo {
+            font-family: "Times New Roman", Times, serif;
+
+            font-size: 25px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            color: white;
+
+            text-shadow:
+                0 0 5px #002fff,
+                0 0 15px #20088a;
+
+            white-space: nowrap;
+        }
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00eaff;
+
+            text-shadow:
+                0 0 10px #00eaff;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 600px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(5, 8, 20, 0.75),
+                    rgba(5, 8, 20, 0.95)
+                ),
+                url("foto-playstation.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h2 {
+            color: #00eaff;
+
+            font-size: 24px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Times New Roman", Times, serif;
+
+            font-size: 65px;
+
+            letter-spacing: 6px;
+
+            color: white;
+
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 15px #2f0e63,
+                0 0 30px #409474,
+                0 0 60px #ff0000;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #c8d1dc;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 30px;
+
+            background: #34a0a0;
+
+            color: #001018;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 0 10px #ffffff,
+                0 0 25px rgba(0, 3, 155, 0.747);
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+
+            background: white;
+        }
+
+
+        /* ================= WARNING ================= */
+
+        .warning {
+            background: #0b7994;
+
+            color: white;
+
+            padding: 10px;
+
+            font-weight: bold;
+
+            font-size: 16px;
+
+            border-top: 1px solid #180235;
+            border-bottom: 1px solid #0f083b;
+        }
+
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 70px 8%;
+
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: "Times New Roman", Times, serif;
+
+            font-size: 40px;
+
+            color: white;
+
+            text-shadow:
+                0 0 15px #00eaff;
+
+            margin-bottom: 10px;
+        }
+
+        .section-desc {
+            color: #9da8b5;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* ================= PAKET ================= */
+
+        .packages {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1100px;
+
+            margin: 0 auto 60px;
+        }
+
+        .card {
+            min-height: 400px;
+
+            padding: 30px 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            justify-content: space-between;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #1b2c48,
+                    #101722
+                );
+
+            border: 1px solid #00eaff;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 0 15px rgba(0, 234, 255, 0.15);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 0 25px #00eaff,
+                0 0 50px rgba(0, 234, 255, 0.2);
+        }
+
+        .card h3 {
+            color: #00eaff;
+
+            font-size: 32px;
+
+            text-shadow:
+                0 0 10px #00eaff;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #c5ced8;
+
+            line-height: 1.6;
+
+            margin: 8px 0;
+        }
+
+        .price {
+            font-size: 25px;
+
+            font-weight: bold;
+
+            color: white;
+
+            margin: 10px 0;
+
+            text-shadow:
+                0 0 10px #00eaff;
+        }
+
+        .card img {
+            max-width: 80%;
+
+            height: 150px;
+
+            object-fit: contain;
+
+            margin-top: 15px;
+        }
+
+
+        /* ================= PRICE LIST ================= */
+
+        .price-list {
+            width: 100%;
+
+            max-width: 900px;
+
+            margin: 60px auto 0;
+        }
+
+        .table-wrapper {
+            width: 100%;
+
+            overflow-x: auto;
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #111b2b,
+                    #0b111c
+                );
+
+            box-shadow:
+                0 0 20px rgba(0, 234, 255, 0.12);
+
+            scrollbar-width: thin;
+
+            scrollbar-color:
+                #00eaff
+                #080b12;
+        }
+
+        .price-table {
+            width: 100%;
+
+            min-width: 600px;
+
+            border-collapse: collapse;
+
+            border-spacing: 0;
+        }
+
+        /* HAPUS SEMUA GARIS TABEL */
+
+        .price-table,
+        .price-table th,
+        .price-table td,
+        .price-table tr {
+            border: none !important;
+
+            outline: none;
+        }
+
+        /* HEADER */
+
+        .price-table th {
+            padding: 18px 15px;
+
+            background: #13243a;
+
+            color: #00eaff;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            text-align: center;
+        }
+
+        /* CELL */
+
+        .price-table td {
+            padding: 17px 15px;
+
+            color: #dce5ee;
+
+            text-align: center;
+
+            vertical-align: middle;
+
+            font-size: 15px;
+        }
+
+        /* CONSOLE */
+
+        .price-table td:first-child {
+            text-align: left;
+
+            padding-left: 25px;
+
+            font-weight: bold;
+
+            color: white;
+        }
+
+        /* HARGA */
+
+        .price-table .harga {
+            color: #00eaff;
+
+            font-weight: bold;
+
+            text-shadow:
+                0 0 8px rgba(
+                    0,
+                    234,
+                    255,
+                    0.5
+                );
+        }
+
+        /* READY */
+
+        .price-table .ready {
+            color: #38ff88;
+
+            font-weight: bold;
+
+            text-shadow:
+                0 0 8px rgba(
+                    56,
+                    255,
+                    136,
+                    0.5
+                );
+        }
+
+        /* COMING */
+
+        .price-table .coming {
+            color: #ff405c;
+
+            font-weight: bold;
+
+            text-shadow:
+                0 0 8px rgba(
+                    255,
+                    64,
+                    92,
+                    0.4
+                );
+        }
+
+        /* HOVER BARIS */
+
+        .price-table tbody tr {
+            transition: 0.25s;
+        }
+
+        .price-table tbody tr:hover {
+            background:
+                rgba(
+                    0,
+                    234,
+                    255,
+                    0.07
+                );
+        }
+
+
+        /* ================= JAM BUKA ================= */
+
+        .open-hours {
+            max-width: 700px;
+
+            margin: 60px auto 0;
+
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #14253d,
+                    #0c131f
+                );
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 0 20px
+                rgba(
+                    0,
+                    234,
+                    255,
+                    0.12
+                );
+        }
+
+        .open-hours h3 {
+            color: #00eaff;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .open-hours .time {
+            color: white;
+
+            font-size: 32px;
+
+            font-weight: bold;
+
+            text-shadow:
+                0 0 12px #00eaff;
+
+            margin-bottom: 10px;
+        }
+
+        .open-hours p:last-child {
+            color: #9da8b5;
+        }
+
+
+        /* ================= SPESIFIKASI ================= */
+
+        .spec-section {
+            margin-top: 60px;
+        }
+
+        .spec-container {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+
+            margin-top: 30px;
+        }
+
+        .spec-card {
+            width: 400px;
+
+            text-align: left;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #1b2c48,
+                    #101722
+                );
+
+            border: 1px solid #00eaff;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 0 15px
+                rgba(
+                    0,
+                    234,
+                    255,
+                    0.15
+                );
+
+            transition: 0.3s;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 0 20px #00eaff;
+        }
+
+        .spec-card h3 {
+            color: #00eaff;
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+
+            text-align: center;
+        }
+
+        .spec-card ul {
+            padding-left: 22px;
+        }
+
+        .spec-card li {
+            color: #dce3eb;
+
+            margin: 12px 0;
+
+            line-height: 1.5;
+        }
+
+        .spec-card strong {
+            color: white;
+        }
+
+
+        /* ================= VIDEO ================= */
+
+        .konten-video {
+            width: 100%;
+
+            max-width: 1000px;
+
+            margin: 30px auto 10px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+
+            padding: 10px;
+
+            overflow: hidden;
+        }
+
+        .konten-video video {
+            display: block;
+
+            width: 100%;
+
+            height: 150px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            border: 2px solid #00eaff;
+
+            background: #05070c;
+
+            box-shadow:
+                0 0 15px #ffffff,
+                0 0 35px
+                rgba(0, 255, 255, 0.2);
+
+            transition: 0.3s;
+        }
+
+        .konten-video video:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 0 20px #00eaff,
+                0 0 40px
+                rgba(
+                    0,
+                    234,
+                    255,
+                    0.4
+                );
+        }
+
+
+        /* ================= PERATURAN ================= */
+
+        .rules {
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: left;
+
+            background: #111827;
+
+            border-left: 5px solid #ff304f;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 0 20px
+                rgba(
+                    255,
+                    48,
+                    79,
+                    0.15
+                );
+        }
+
+        .rules h3 {
+            color: #ff405c;
+
+            margin-bottom: 15px;
+        }
+
+        .rules ul {
+            padding-left: 22px;
+        }
+
+        .rules li {
+            margin: 12px 0;
+
+            color: #d5dce4;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #0d111a;
+        }
+
+        .contact-box {
+            max-width: 650px;
+
+            margin: auto;
+        }
+
+        .contact-box p {
+            margin: 15px;
+
+            color: #c5ced8;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        .contact-box a {
+            color: #00eaff;
+
+            word-break: break-word;
+        }
+
+        .contact-box img {
+            display: block;
+
+            margin: 25px auto;
+
+            max-width: 100%;
+
+            height: auto;
+
+            border-radius: 10px;
+
+            border: 1px solid #00eaff;
+
+            box-shadow:
+                0 0 15px
+                rgba(
+                    0,
+                    234,
+                    255,
+                    0.15
+                );
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #05070c;
+
+            color: #778392;
+
+            border-top: 1px solid #17202c;
+        }
+
+        footer strong {
+            color: #00eaff;
+        }
+
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 900px) {
+
+            .packages {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .packages .card:last-child {
+                grid-column:
+                    1 / -1;
+
+                max-width: 500px;
+
+                width: 100%;
+
+                margin: auto;
+            }
+
+            .konten-video {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .konten-video video {
+                height: 150px;
+            }
+
+        }
+
+
+        /* ================= HP ================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+
+                padding: 13px 5%;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            nav div:last-child {
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 8px;
+            }
+
+            nav a {
+                margin: 0;
+
+                font-size: 12px;
+            }
+
+
+            .hero {
+                min-height: 500px;
+
+                padding: 50px 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+
+                letter-spacing: 3px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+
+                letter-spacing: 3px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+
+            section {
+                padding:
+                    55px 5%;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+
+            /* PAKET */
+
+            .packages {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .packages .card:last-child {
+                grid-column: auto;
+
+                max-width: none;
+            }
+
+            .card {
+                min-height: 360px;
+            }
+
+
+            /* TABLE */
+
+            .price-list {
+                margin-top: 40px;
+            }
+
+            .table-wrapper {
+                border-radius: 12px;
+            }
+
+            .price-table {
+                min-width: 560px;
+            }
+
+            .price-table th {
+                padding: 14px 10px;
+
+                font-size: 13px;
+            }
+
+            .price-table td {
+                padding: 14px 10px;
+
+                font-size: 13px;
+            }
+
+            .price-table td:first-child {
+                padding-left: 18px;
+            }
+
+
+            /* JAM BUKA */
+
+            .open-hours {
+                padding: 25px 15px;
+            }
+
+            .open-hours .time {
+                font-size: 25px;
+            }
+
+
+            /* SPEC */
+
+            .spec-card {
+                width: 100%;
+            }
+
+
+            /* VIDEO */
+
+            .konten-video {
+                width: 100%;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 10px;
+
+                padding: 5px;
+            }
+
+            .konten-video video {
+                width: 100%;
+
+                height: 120px;
+
+                border-radius: 8px;
+
+                border-width: 1px;
+            }
+
+
+            /* CONTACT */
+
+            .contact-box p {
+                font-size: 16px;
+            }
+
+        }
+
+
+        /* ================= HP KECIL ================= */
+
+        @media (max-width: 400px) {
+
+            .konten-video {
+                gap: 8px;
+            }
+
+            .konten-video video {
+                height: 100px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            section {
+                padding-left: 5%;
+
+                padding-right: 5%;
+            }
+
+            .price-table {
+                min-width: 530px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            Rental PlayStation
+        </div>
+
+        <div>
+
+            <a href="#home">HOME</a>
+
+            <a href="#paket">PAKET</a>
+
+            <a href="#harga">HARGA</a>
+
+            <a href="#games">GAMES</a>
+
+            <a href="#aturan">ATURAN</a>
+
+            <a href="#kontak">KONTAK</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-content">
+
+            <h2>
+                WELCOME TO
+            </h2>
+
+            <h1>
+                RENTAL PLAYSTATION
+            </h1>
+
+            <p>
+
+                PLAY NO LIMITS
+
+                <br>
+
+                Tempat terbaik untuk bermain
+                PlayStation bersama teman,
+                keluarga, dan squad kamu.
+
+            </p>
+
+            <a
+                href="#paket"
+                class="button"
+            >
+                LIHAT PAKET
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PERINGATAN ================= -->
+
+    <div class="warning">
+
+        <marquee
+            behavior="scroll"
+            direction="left"
+            scrollamount="7"
+        >
+
+            ⚠️ DILARANG KERAS MENGGUNAKAN
+            JURUS CAPIT KEPITING!
+
+            DAPAT MENYEBABKAN ANALOG STIK
+            CEPAT PATAH, TERUTAMA STIK PS4! ⚠️
+
+        </marquee>
+
+    </div>
+
+
+    <!-- ================= PAKET ================= -->
+
+    <section id="paket">
+
+        <h2 class="section-title">
+            PAKET RENTAL
+        </h2>
+
+        <p class="section-desc">
+            Pilih console favoritmu dan mulai permainan.
+        </p>
+
+
+        <div class="packages">
+
+
+            <!-- PS3 -->
+
+            <div class="card">
+
+                <div>
+
+                    <h3>
+                        PS3
+                    </h3>
+
+                    <p>
+                        1 Jam
+                    </p>
+
+                    <div class="price">
+                        Rp5.000
+                    </div>
+
+                    <p>
+                        Cocok untuk bermain santai
+                        bersama teman.
+                    </p>
+
+                </div>
+
+                <img
+                    src="fly.png"
+                    alt="Gambar PS3"
+                    width="150"
+                >
+
+            </div>
+
+
+            <!-- PS4 -->
+
+            <div class="card">
+
+                <div>
+
+                    <h3>
+                        PS4
+                    </h3>
+
+                    <p>
+                        1 Jam
+                    </p>
+
+                    <div class="price">
+                        Rp8.000
+                    </div>
+
+                    <p>
+                        Grafik lebih tajam
+                        dan koleksi game lengkap.
+                    </p>
+
+                </div>
+
+                <img
+                    src="esdoger.png"
+                    alt="Gambar PS4"
+                    width="250"
+                >
+
+            </div>
+
+
+            <!-- PS5 -->
+
+            <div class="card">
+
+                <div>
+
+                    <h3>
+                        PS5
+                    </h3>
+
+                    <p>
+                        Belum tersedia
+                    </p>
+
+                    <div class="price">
+                        COMING SOON
+                    </div>
+
+                    <p>
+                        Tunggu informasi berikutnya
+                        mengenai ketersediaan PS5.
+                    </p>
+
+                </div>
+
+                <img
+                    src="besi.png"
+                    alt="Gambar PS5"
+                    width="150"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PRICE LIST ================= -->
+
+        <div
+            class="price-list"
+            id="harga"
+        >
+
+            <h2 class="section-title">
+                PRICE LIST
+            </h2>
+
+            <p class="section-desc">
+                Daftar harga sewa PlayStation.
+            </p>
+
+
+            <div class="table-wrapper">
+
+                <table class="price-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                CONSOLE
+                            </th>
+
+                            <th>
+                                DURASI
+                            </th>
+
+                            <th>
+                                HARGA
+                            </th>
+
+                            <th>
+                                STATUS
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS3
+                            </td>
+
+                            <td>
+                                1 Jam
+                            </td>
+
+                            <td class="harga">
+                                Rp5.000
+                            </td>
+
+                            <td class="ready">
+                                READY
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS3
+                            </td>
+
+                            <td>
+                                3 Jam
+                            </td>
+
+                            <td class="harga">
+                                Rp15.000
+                            </td>
+
+                            <td class="ready">
+                                READY
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS3
+                            </td>
+
+                            <td>
+                                5 Jam
+                            </td>
+
+                            <td class="harga">
+                                Rp25.000
+                            </td>
+
+                            <td class="ready">
+                                READY
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS4
+                            </td>
+
+                            <td>
+                                1 Jam
+                            </td>
+
+                            <td class="harga">
+                                Rp8.000
+                            </td>
+
+                            <td class="ready">
+                                READY
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS4
+                            </td>
+
+                            <td>
+                                3 Jam
+                            </td>
+
+                            <td class="harga">
+                                Rp24.000
+                            </td>
+
+                            <td class="ready">
+                                READY
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS4
+                            </td>
+
+                            <td>
+                                5 Jam
+                            </td>
+
+                            <td class="harga">
+                                Rp40.000
+                            </td>
+
+                            <td class="ready">
+                                READY
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🎮 PS5
+                            </td>
+
+                            <td>
+                                -
+                            </td>
+
+                            <td class="harga">
+                                COMING SOON
+                            </td>
+
+                            <td class="coming">
+                                BELUM TERSEDIA
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= JAM BUKA ================= -->
+
+        <div class="open-hours">
+
+            <h3>
+                🕙 JAM OPERASIONAL
+            </h3>
+
+            <p class="time">
+                10.00 - 23.00 WIB
+            </p>
+
+            <p>
+                Buka setiap hari.
+            </p>
+
+        </div>
+
+
+        <!-- ================= SPESIFIKASI ================= -->
+
+        <div class="spec-section">
+
+            <h2 class="section-title">
+                SPESIFIKASI CONSOLE
+            </h2>
+
+            <p class="section-desc">
+
+                Spesifikasi PlayStation
+                yang tersedia di Rental PlayStation.
+
+            </p>
+
+
+            <div class="spec-container">
+
+
+                <!-- PS3 -->
+
+                <div class="spec-card">
+
+                    <h3>
+                        🎮 PLAYSTATION 3
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <strong>CPU:</strong>
+                            Cell Broadband Engine
+                        </li>
+
+                        <li>
+                            <strong>GPU:</strong>
+                            NVIDIA RSX
+                        </li>
+
+                        <li>
+                            <strong>RAM:</strong>
+                            256 MB XDR + 256 MB GDDR3
+                        </li>
+
+                        <li>
+                            <strong>Resolusi:</strong>
+                            Hingga 1080p
+                        </li>
+
+                        <li>
+                            <strong>Media:</strong>
+                            Blu-ray Disc
+                        </li>
+
+                        <li>
+                            <strong>Controller:</strong>
+                            DualShock 3
+                        </li>
+
+                        <li>
+                            <strong>Game:</strong>
+                            GTA V, PES Efootball patch, FIFA 19,
+                            Tekken, dan berbagai
+                            game PS3 lainnya.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PS4 -->
+
+                <div class="spec-card">
+
+                    <h3>
+                        🎮 PLAYSTATION 4
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <strong>CPU:</strong>
+                            AMD Jaguar 8-core
+                        </li>
+
+                        <li>
+                            <strong>GPU:</strong>
+                            AMD Radeon-based
+                        </li>
+
+                        <li>
+                            <strong>RAM:</strong>
+                            8 GB GDDR5
+                        </li>
+
+                        <li>
+                            <strong>Resolusi:</strong>
+                            Hingga 1080p
+                        </li>
+
+                        <li>
+                            <strong>Media:</strong>
+                            Blu-ray Disc
+                        </li>
+
+                        <li>
+                            <strong>Controller:</strong>
+                            DualShock 4
+                        </li>
+
+                        <li>
+                            <strong>Game:</strong>
+                            GTA V, FC26, PES efootball patch,
+                            Tekken 7, dan berbagai
+                            game PS4 lainnya.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GAMES ================= -->
+
+    <section id="games">
+
+        <h2 class="section-title">
+            EXCLUSIVE GAMES
+        </h2>
+
+        <p class="section-desc">
+
+            Rasakan pengalaman bermain
+            yang epic dan menyenangkan.
+
+        </p>
+
+
+        <div class="konten-video">
+
+
+            <video controls>
+
+                <source
+                    src="lokotre.mp4"
+                    type="video/mp4"
+                >
+
+                Browser kamu tidak
+                mendukung video.
+
+            </video>
+
+
+            <video controls>
+
+                <source
+                    src="source.mp4"
+                    type="video/mp4"
+                >
+
+                Browser kamu tidak
+                mendukung video.
+
+            </video>
+
+
+            <video controls>
+
+                <source
+                    src="siomay.mp4"
+                    type="video/mp4"
+                >
+
+                Browser kamu tidak
+                mendukung video.
+
+            </video>
+
+
+            <video controls>
+
+                <source
+                    src="mulyono.mp4"
+                    type="video/mp4"
+                >
+
+                Browser kamu tidak
+                mendukung video.
+
+            </video>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PERATURAN ================= -->
+
+    <section id="aturan">
+
+        <h2 class="section-title">
+            PERATURAN RENTAL
+        </h2>
+
+        <p class="section-desc">
+            Harap menjaga fasilitas rental.
+        </p>
+
+
+        <div class="rules">
+
+            <h3>
+                ⚠️ PERATURAN WAJIB
+            </h3>
+
+            <ul>
+
+                <li>
+                    Dilarang memukul atau
+                    membanting controller.
+                </li>
+
+                <li>
+                    Dilarang menggunakan
+                    jurus capit kepiting.
+                </li>
+
+                <li>
+                    Dilarang menarik kabel
+                    controller secara paksa.
+                </li>
+
+                <li>
+                    Dilarang membawa makanan
+                    atau minuman terlalu dekat
+                    dengan console.
+                </li>
+
+                <li>
+                    Kerusakan akibat kelalaian
+                    pengguna menjadi tanggung
+                    jawab penyewa.
+                </li>
+
+                <li>
+                    Dilarang menggunakan cheat
+                    via Disc BLU-RAY.
+                </li>
+               <li>
+                    dilarang buang sampah sembarangan .
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= KONTAK ================= -->
+
+    <section
+        class="contact"
+        id="kontak"
+    >
+
+        <h2 class="section-title">
+            HUBUNGI KAMI
+        </h2>
+
+        <p class="section-desc">
+
+            Booking hanya bisa dilakukan
+            langsung di tempat.
+
+        </p>
+
+
+        <div class="contact-box">
+
+
+            <p>
+
+                📍
+
+                <strong>
+                    Lokasi:
+                </strong>
+
+                <br>
+
+                𝔏𝔬𝔨𝔞𝔰𝔦: 𝔍𝔩. 𝔭𝔦𝔰𝔞𝔫𝔤𝔞𝔫 𝔟𝔞𝔯𝔲 𝔑𝔬. 10 𝔫𝔞𝔪𝔟𝔯𝔲 𝔯𝔱 11 𝔯𝔴 13 𝔐𝔞𝔱𝔯𝔞𝔪𝔞𝔫 𝔍𝔞𝔨𝔞𝔯𝔱𝔞 𝔗𝔦𝔪𝔲𝔯
+
+                <br>
+            </p>
+
+
+            <p>
+
+                🗺️
+
+                <strong>
+                     𝕲𝖔𝖔𝖌𝖑𝖊 𝕸𝕬𝕻𝕾:
+                </strong>
+
+                <br>
+
+                <a
+                    href="https://maps.app.goo.gl/L2ihLX7kHeYFoaf89"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    𝚑𝚝𝚝𝚙𝚜://𝚖𝚊𝚙𝚜.𝚊𝚙𝚙.𝚐𝚘𝚘.𝚐𝚕/𝙻𝟸𝚒𝚑𝙻𝚇𝟽𝚔𝙷𝚎𝚈𝙵𝚘𝚊𝚏𝟾𝟿
+                </a>
+
+            </p>
+
+
+            <p>
+
+                📞💬
+
+                <strong>
+                   𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙: :
+                </strong>
+
+                <br>
+
+                𝟶𝟾𝟷𝟹-𝟾𝟷𝟹-𝟷𝟷𝟸𝟸𝟷
+
+            </p>
+
+
+            <p>
+
+                🎮
+
+                <strong>
+                    Jam Buka:
+                </strong>
+
+                <br>
+
+                10.00 - 23.00 WIB
+
+            </p>
+
+
+            <img
+                src="qualtity.jpg"
+                alt="Foto Rental PlayStation"
+                width="250"
+            >
+
+
+            <br>
+
+
+            <a
+                href="#harga"
+                class="button"
+            >
+                🎮 LIHAT PRICE LIST
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 𝟚𝟘𝟚𝟟 𝟚𝟘𝟚𝟠 
+
+        <strong>
+             𝖗𝖊𝖓𝖙𝖆𝖑 𝖕𝖑𝖆𝖞𝖘𝖙𝖆𝖘𝖎𝖔𝖓 𝕟𝕒𝕞𝕓𝕣𝕦 𝕔𝕠𝕞𝕡𝕒𝕟𝕪 𝖊𝖘𝖙 2025 
+        </strong>
+
+        — All Rights Reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
